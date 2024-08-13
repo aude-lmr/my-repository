@@ -1,0 +1,61 @@
+@import "../../utils/style/colors.scss";
+
+.bannerContainer {
+  margin: 40px 0 30px;
+  height: 200px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.bannerImg {
+  filter: brightness(0.7) contrast(100%) grayscale(0.2) sepia(0.1);
+  border-radius: 25px;
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text {
+  color: $text-color;
+  font-size: 38px;
+  font-weight: normal;
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
+@media screen and (min-width: 750px) and (max-width: 1024px) and (orientation: portrait) {
+  .bannerContainer {
+    height: 230px;
+  }
+
+  .text {
+    font-size: 42px;
+    top: 34%;
+    left: 37%;
+    text-align: left;
+    font-weight: 400;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .bannerContainer {
+    margin: 15px 0 35px 0;
+    height: 111px;
+  }
+
+  .text {
+    font-size: 24px;
+    text-align: left;
+    left: 42%;
+    font-weight: 400;
+    width: 75%;
+    white-space: pre-line;
+  }
+}

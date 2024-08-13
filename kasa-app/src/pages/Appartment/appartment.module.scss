@@ -1,0 +1,229 @@
+@import "../../utils/style/colors.scss";
+
+.apptInfosContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apptTitle {
+  margin-bottom: 30px;
+}
+
+.apptName {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  color: $primary-color;
+  line-height: 142.6%;
+}
+
+.location {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0 10px 0;
+  color: $primary-color;
+}
+.hostInfosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.hostInfos {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.hostName {
+  font-size: 18px;
+  color: $primary-color;
+  position: relative;
+  margin: 0;
+  width: 42%;
+  text-align: right;
+  font-weight: 500;
+}
+
+.hostPicture {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.equipmentsCollapse {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapseContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 120px;
+}
+
+.collapseTxt {
+  color: $primary-color;
+  font-size: 18px;
+  margin: 0;
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+.apptTagsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  background-color: $primary-color;
+  color: $text-color;
+  font-size: 14px;
+  margin-right: 12px;
+  padding: 8px 55px;
+  border-radius: 10px;
+  height: 15px;
+}
+
+.equipList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1250px in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 1250px) and (orientation: portrait) {
+  .apptInfosContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apptName {
+    font-size: 26px;
+  }
+
+  .collapseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collapseTxt {
+    font-size: 18px;
+  }
+
+  .hostInfosContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .hostName {
+    font-size: 30px;
+    color: $primary-color;
+    position: relative;
+    right: 20px;
+    margin: 0;
+    width: 45%;
+    text-align: right;
+  }
+
+  .hostInfos {
+    justify-content: flex-end;
+  }
+
+  .hostName {
+    font-size: 20px;
+  }
+  .hostPicture {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tags {
+    font-size: 14px;
+    padding: 11px 50px;
+    font-weight: 500;
+    font-weight: 500;
+    margin: 0 10px 0 0;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .apptInfosContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apptTitle {
+    margin-bottom: 5px;
+  }
+
+  .collapseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collapseTxt {
+    font-size: 12px;
+  }
+
+  .hostInfosContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .hostInfos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hostName {
+    font-size: 12px;
+    right: 7px;
+    font-weight: 600;
+  }
+  .hostPicture {
+    width: 32px;
+    height: 32px;
+  }
+
+  .location {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .tags {
+    font-size: 10px;
+    font-weight: 500;
+    margin: 0 10px 5px 0;
+    padding: 3px 20px;
+  }
+  .apptName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .collapseTxt {
+    font-size: 22px;
+  }
+}

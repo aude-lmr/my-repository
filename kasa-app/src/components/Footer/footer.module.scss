@@ -1,0 +1,32 @@
+@import "../../utils/style/colors.scss";
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 209px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logo {
+  width: 122px;
+  height: 40px;
+  position: relative;
+  top: 60px;
+}
+
+.notice {
+  color: $text-color;
+  font-size: 24px;
+  position: relative;
+  top: 69px;
+  margin-bottom: 55px;
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .notice {
+    font-size: 12px;
+  }
+}

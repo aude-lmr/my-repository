@@ -1,0 +1,67 @@
+@import "../../utils/style/colors.scss";
+
+.collapseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color;
+  border-radius: 10px;
+  border: $primary-color;
+  height: 50px;
+  padding: 0 20px;
+  width: 100%;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+}
+
+.title {
+  color: $text-color;
+  font-size: 18px;
+}
+
+.textContainer {
+  background-color: #f6f6f6;
+  padding: 20px 10px 20px 15px;
+  margin-bottom: 20px;
+}
+
+.collapseTxt {
+  color: $primary-color;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  color: $text-color;
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .title {
+    font-size: 18px;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .title {
+    color: $text-color;
+    font-size: 13px;
+  }
+
+  .collapseBtn {
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  .icon {
+    width: 18.42px;
+    height: 18.42px;
+  }
+}

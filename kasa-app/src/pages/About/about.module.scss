@@ -1,0 +1,53 @@
+@import "../../utils/style/colors.scss";
+
+.container {
+  display: grid;
+  place-items: center;
+  height: auto;
+  margin: 0 auto 200px auto;
+  width: 80%;
+}
+.collapseBtn {
+  height: 75px;
+
+  margin-top: 32px;
+}
+.collapseTxt {
+  color: $primary-color;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 35px;
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .collapseTitle {
+    font-size: 30px;
+  }
+
+  .collapseTxt {
+    font-size: 25px;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .aboutBannerMobile {
+    height: 223px;
+  }
+  .title {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 23px;
+  }
+
+  .collapseTxt {
+    font-size: 12px;
+  }
+}

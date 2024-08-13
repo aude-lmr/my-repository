@@ -1,0 +1,76 @@
+@import "../../utils/style/colors.scss";
+
+.slideshow {
+  width: 100%;
+  height: 415px;
+  position: relative;
+  margin: 46px 0;
+
+  & .slideshowSlide {
+    border-radius: 25px;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+  }
+  & .slideshowInactive {
+    opacity: 0.7;
+  }
+
+  & .slideshowActive {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    position: relative;
+
+    & .slideshowPagination {
+      position: absolute;
+      bottom: 30px;
+      width: 50px;
+      left: calc(50% - 20px);
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+    }
+  }
+
+  & .arrow {
+    width: 63px;
+    height: 300px;
+    position: absolute;
+    top: 15%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  & .left {
+    left: 2%;
+  }
+
+  & .right {
+    right: 2%;
+  }
+
+  & .none {
+    display: none;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .slideshow {
+    height: 255px;
+    margin: 20px 0;
+    & .slideshowSlide {
+      height: 255px;
+    }
+
+    & .arrow {
+      top: 40%;
+      width: 27px;
+      height: 57px;
+    }
+  }
+
+  .slideshowPagination {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../utils/style/colors.scss";
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  margin-top: 15px;
+}
+
+.headerLink {
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.spaceBetweenLink {
+  margin-right: 50px;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .headerLink {
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .spaceBetweenLink {
+    margin-right: 19px;
+  }
+
+  .logo {
+    height: 75px;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .navContainer {
+    height: 85px;
+  }
+  .headerLink {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .spaceBetweenLink {
+    margin-right: 15px;
+  }
+
+  .logo {
+    height: 47px;
+  }
+}

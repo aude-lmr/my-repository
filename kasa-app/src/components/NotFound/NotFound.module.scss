@@ -1,0 +1,78 @@
+@import "../../utils/style/colors.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.error {
+  font-size: 288px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: 25%;
+}
+
+.message {
+  font-size: 36px;
+  margin: 0;
+  position: absolute;
+  top: 76%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.Link {
+  font-size: 25px;
+  position: absolute;
+  top: 95%;
+}
+
+.error,
+.message,
+.Link {
+  color: $primary-color;
+}
+
+/* Media query for screens with a minimum width of 750px and a maximum width of 1024px in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    height: 100vh;
+  }
+
+  .message {
+    top: 55%;
+  }
+
+  .Link {
+    top: 68%;
+  }
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media screen and (max-width: 767px) {
+  .container {
+    height: 70vh;
+  }
+  .error {
+    font-size: 96px;
+    top: 30%;
+  }
+
+  .message {
+    font-size: 18px;
+    text-align: center;
+    top: 48%;
+    font-weight: 600;
+    line-height: 25.67px;
+    white-space: pre-line;
+  }
+
+  .Link {
+    font-size: 14px;
+    line-height: 19.96px;
+    top: 70%;
+  }
+}
